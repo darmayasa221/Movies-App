@@ -1,0 +1,14 @@
+@media screen and (min-width: 650px) {
+  .Movie {
+    grid-template-columns: auto 1fr;
+  }  
+
+  .Movie_Title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .Movie_Overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}

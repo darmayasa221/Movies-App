@@ -1,0 +1,81 @@
+.AppBar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.AppBar_Menu {
+  padding: 8px;
+}
+.AppBar_Brand {
+  display: flex;
+  align-items: center;
+}
+
+.AppBar_Brand h1 {
+  color: rgb(179, 0, 0);
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.AppBar_Navigation {
+  position: absolute;
+  top: 52px;
+  left: -110%;
+  width: 100%;
+  transition: all 0.5s;
+  padding: 7px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.AppBar_Navigation ul li a{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.AppBar_Navigation__Open {
+ left: 0;
+} 
+
+@media screen and (min-width : 650px) {
+  .AppBar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+  .AppBar_Brand h1 {
+    font-size: 1.5em;
+  }
+  .AppBar_Menu  {
+    display: none;
+  }
+  .AppBar_Navigation {
+    position: static;
+    width: 100%;
+  }
+  .AppBar_Navigation ul li {
+    display:  inline-block;
+  }
+  .AppBar_Navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 800) { 
+  .AppBar_Brand h1 {
+    font-size: 2em;
+  }
+}

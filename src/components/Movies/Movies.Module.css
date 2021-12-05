@@ -1,0 +1,34 @@
+.Content__Heading {
+  font-weight: normal;
+}
+
+.Movies {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+@media screen and (min-width: 650px) {
+  .Movies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .Movies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Movies {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .Movies {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

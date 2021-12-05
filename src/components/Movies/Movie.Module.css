@@ -1,0 +1,49 @@
+.MovieItem {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.MovieItem_Header{
+  position: relative;
+}
+
+.MovieItem_Header > img {
+  width: 100%;
+}
+
+.MovieItem_Header__Rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.MovieItem_Header__Rating__Score {
+  margin-left: 10px ;
+}
+
+.MovieItem_Content {
+  padding: 16px;
+}
+
+.MovieItem_Content h3 {
+  margin: 0 0 10px 0;
+}
+
+.MovieItem_Content h3 a {
+  color: rgb(179, 0, 0);
+  text-decoration: none;
+}
+
+.MovieItem_Content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
