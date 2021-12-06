@@ -1,8 +1,25 @@
+  .Movie {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+  }
+
+  .Movie_Poster {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .Movie_Info h4 {
+    margin: 8px 0;
+  }
+
 @media screen and (min-width: 650px) {
   .Movie {
     grid-template-columns: auto 1fr;
   }  
-
   .Movie_Title {
     grid-column-start: 1;
     grid-column-end: 3;

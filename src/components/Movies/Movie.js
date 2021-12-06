@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import classes from './Movie.Module.css';
 
 const Movie = (props) => {
-  const { movie } = props;
+  const { movie, category } = props;
   return (
     <div className={classes.MovieItem}>
       <div className={classes.MovieItem_Header}>
@@ -20,7 +20,7 @@ const Movie = (props) => {
       </div>
       <div className={classes.MovieItem_Content}>
         <h3>
-          <NavLink to="#">{movie.title}</NavLink>
+          <NavLink to={`/${category}/${movie.id}`}>{movie.title}</NavLink>
         </h3>
         <p>{movie.overview}</p>
       </div>

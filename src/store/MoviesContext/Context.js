@@ -14,19 +14,17 @@ const MoviesContextProvider = (props) => {
   });
   const { mapMovie, newData } = mapMovies;
   const [getNowPlaying, getUpcoming] = MoviesContextHandler();
-  const getNowPlayingMoviesHandler = async (title) => {
-    console.log(title);
+  const getNowPlayingMoviesHandler = async (title, category) => {
     const nowPlayingMovies = await getNowPlaying(API_ENDPOINT.NOW_PLAYING);
     const dataMovie = nowPlayingMovies.results.map((movie) => mapMovie(movie));
-    const newDataMovies = newData(dataMovie, title);
+    const newDataMovies = newData(dataMovie, title, category);
     setMovies(newDataMovies);
     console.log('now');
   };
-  const getUpcomingMoviesHandler = async (title) => {
-    console.log(title);
+  const getUpcomingMoviesHandler = async (title, category) => {
     const upcomingMovies = await getUpcoming(API_ENDPOINT.UPCOMING);
     const dataMovie = upcomingMovies.results.map((movie) => mapMovie(movie));
-    const newDataMovies = newData(dataMovie, title);
+    const newDataMovies = newData(dataMovie, title, category);
     setMovies(newDataMovies);
     console.log('up');
   };

@@ -13,8 +13,10 @@ const App = () => {
       <Header />
       <main>
         <Routes>
-          <Route path="/now-playing" element={<NowPlaying />} />
-          <Route path="/upcoming" element={<Upcoming />} />
+          <Route path="/now-playing" element={<NowPlaying />} exact />
+          <Route path="/now-playing/:movieId" element={<NowPlaying />} />
+          <Route path="/upcoming" element={<Upcoming />} exact />
+          <Route path="/upcoming/:movieId" element={<Upcoming />} exact />
         </Routes>
       </main>
       <Footer />
